@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,12 +21,39 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpaceShip" translatesAutoresizingMaskIntoConstraints="NO" id="Jms-Q1-lUK">
+                                <rect key="frame" x="0.0" y="-415" width="375" height="563"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinstein" translatesAutoresizingMaskIntoConstraints="NO" id="yXz-Pa-TvH">
+                                <rect key="frame" x="129" y="138" width="117" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="zjs-Sg-2Vv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jms-Q1-lUK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Xb-i6-lQ9"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Jms-Q1-lUK" secondAttribute="bottom" constant="519" id="C2m-ff-DBW"/>
+                            <constraint firstItem="yXz-Pa-TvH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="118" id="FPk-Hw-Wa0"/>
+                            <constraint firstAttribute="trailing" secondItem="Jms-Q1-lUK" secondAttribute="trailing" id="R0g-8W-Kaj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yXz-Pa-TvH" secondAttribute="bottom" constant="412" id="aEX-hk-s1P"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jms-Q1-lUK" secondAttribute="bottom" constant="519" id="tea-f1-Gmj"/>
+                            <constraint firstItem="Jms-Q1-lUK" firstAttribute="centerX" secondItem="yXz-Pa-TvH" secondAttribute="centerX" id="tuI-gb-V0P"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="profileImageView" destination="yXz-Pa-TvH" id="pA3-ce-dyU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="399.19999999999999" y="388.15592203898052"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AlbertEinstein" width="300" height="320"/>
+        <image name="SpaceShip" width="900" height="563"/>
+    </resources>
 </document>
